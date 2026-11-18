@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5b4bdb">
+  <title>Việt Trung – 繁體翻譯</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand-mark">譯</div>
+      <div><h1>Việt Trung</h1><p>越南語 → 繁體中文（台灣）</p></div>
+    </header>
+
+    <section class="panel">
+      <div class="section-head"><label for="source">Tiếng Việt</label><button id="clearBtn" class="text-btn" type="button">Xóa</button></div>
+      <textarea id="source" placeholder="Nhập từ, câu hoặc đoạn văn tiếng Việt..."></textarea>
+      <div class="actions">
+        <span class="hint">Dịch sang tiếng Trung phồn thể</span>
+        <button id="translateBtn" type="button">Dịch ngay <span>→</span></button>
+      </div>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <section id="result" class="result hidden">
+      <div class="result-head"><h2>Kết quả dịch</h2><button id="copyAllBtn" class="text-btn" type="button">Sao chép tất cả</button></div>
+      <article class="answer-card">
+        <div class="field-head"><span>繁體中文</span><button data-copy="traditional" class="copy-btn">Sao chép</button></div>
+        <p id="traditional" class="chinese"></p>
+      </article>
+      <article class="answer-card">
+        <div class="field-head"><span>Pinyin</span><button data-copy="pinyin" class="copy-btn">Sao chép</button></div>
+        <p id="pinyin"></p>
+      </article>
+      <article class="answer-card">
+        <div class="field-head"><span>Âm Hán Việt</span><button data-copy="han_viet" class="copy-btn">Sao chép</button></div>
+        <p id="han_viet"></p>
+      </article>
+      <article class="answer-card">
+        <div class="field-head"><span>Nghĩa tiếng Việt / giải thích</span><button data-copy="meaning" class="copy-btn">Sao chép</button></div>
+        <p id="meaning"></p>
+      </article>
+      <article class="answer-card">
+        <div class="field-head"><span>Ví dụ sử dụng</span></div>
+        <p id="example"></p>
+      </article>
+    </section>
+
+    <footer>Phiên bản thử nghiệm • Cần kết nối Internet để dịch</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
